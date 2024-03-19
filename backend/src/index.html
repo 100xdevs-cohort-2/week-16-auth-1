@@ -34,9 +34,7 @@
     });
 
     document.getElementById('logoutButton').addEventListener('click', () => {
-        axios.post(`/logout`, {}, {
-            withCredentials: true,
-        }).then(() => {
+        axios.post(`/logout`).then(() => {
             console.log('Logged out successfully.');
         }).catch(error => {
             console.error('Logout failed:', error);
@@ -44,9 +42,7 @@
     });
 
     function fetchUserData() {
-        axios.get(`/user`, {
-            withCredentials: true,
-        }).then(response => {
+        axios.get(`/user`).then(response => {
             const userData = response.data;
             displayUserData(userData);
         }).catch(error => {

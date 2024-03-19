@@ -14,10 +14,6 @@ app.use(cors({
     origin: "http://localhost:5173"
 }));
 
-app.post("/signup", (req, res) => {
-    res.send("done");
-});
-
 app.post("/signin", (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
